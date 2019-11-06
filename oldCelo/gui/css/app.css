@@ -1,0 +1,226 @@
+/* http://sass-lang.com/guide */
+html, body, div, span, p, a, img, ol, ul, li, form, table, tbody, tfoot, thead, tr, th, td, canvas {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+  box-sizing: border-box; }
+
+body {
+  line-height: 1; }
+
+ol, ul {
+  list-style: none; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+/* containers */
+/* font colors */
+/* backgrounds */
+/* common positioning */
+#global-wrapper {
+  height: 100vh; }
+
+.wrapper {
+  display: flex; }
+
+/* level 0-1 (relation global to the 3 main columns) */
+.level-0 {
+  display: flex;
+  flex-direction: row; }
+
+#server-wrapper {
+  order: 1;
+  flex-basis: 25%; }
+
+#node-stats-wrapper {
+  order: 2;
+  flex-basis: 50%; }
+
+#node-listing-wrapper {
+  order: 3;
+  flex-basis: 25%; }
+
+/* level 1-2 (relation three main columns to specific windows inside them) */
+.level-1 {
+  display: flex;
+  flex-direction: column; }
+
+/* server column */
+#server-settings {
+  order: 1;
+  flex-basis: 50%; }
+
+#server-status {
+  order: 2;
+  flex-basis: 40%; }
+
+#server-console {
+  order: 3;
+  flex-basis: 10%; }
+
+/* node stats column */
+#node-settings {
+  order: 1;
+  flex-basis: 70%; }
+
+#node-status {
+  order: 2;
+  flex-basis: 20%; }
+
+#node-console {
+  order: 3;
+  flex-basis: 10%; }
+
+/* node listing column */
+#node-listing {
+  order: 1;
+  flex-basis: 100%; }
+
+/* common visuals */
+body {
+  font-family: Calibri, Arial, sans-serif;
+  color: #bababa;
+  background-color: #2b2b2b; }
+
+.button {
+  border: none;
+  background-color: #333;
+  color: #999;
+  cursor: pointer;
+  justify-content: center;
+  text-align: center;
+  -webkit-touch-callout: none;
+  /* iOS Safari */
+  -webkit-user-select: none;
+  /* Chrome/Safari/Opera */
+  -moz-user-select: none;
+  /* Firefox */
+  -ms-user-select: none;
+  /* IE/Edge */
+  user-select: none; }
+  .button:hover {
+    background-color: #444; }
+  .button:active {
+    background-color: #555; }
+
+.wrapper {
+  border-color: #4d4d4d;
+  border-style: solid; }
+
+.title-bar {
+  -webkit-touch-callout: none;
+  /* iOS Safari */
+  -webkit-user-select: none;
+  /* Chrome/Safari/Opera */
+  -moz-user-select: none;
+  /* Firefox */
+  -ms-user-select: none;
+  /* IE/Edge */
+  user-select: none; }
+
+.level-1:not(:last-child) {
+  border-right-width: 1px; }
+
+.level-2:not(:last-child) {
+  border-bottom-width: 1px; }
+
+.text-container {
+  padding: 0.2em; }
+
+/* windows - positioning */
+.level-2 {
+  display: flex;
+  flex-direction: column; }
+
+.title-bar {
+  flex-grow: 0; }
+
+.button-bar {
+  flex-grow: 0; }
+
+.window-content {
+  flex-grow: 1; }
+
+.level-3 {
+  display: flex;
+  flex-direction: row; }
+
+.level-4 {
+  display: flex;
+  flex-grow: 1; }
+
+.two_columns {
+  flex-basis: 50%; }
+
+/* windows - visuals */
+.window .title-bar {
+  background-color: #1b1b1b;
+  text-align: center; }
+
+/* controls - visuals */
+.settings input[type=text] {
+  background-color: #222;
+  border: none;
+  color: #bababa;
+  text-align: right; }
+
+/* console - positioning */
+/* console - visuals */
+.console textarea {
+  resize: none;
+  background-color: #222;
+  border: none;
+  color: #bababa; }
+
+/* listings - positioning */
+.listing-entries.level-3 {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1; }
+  .listing-entries.level-3 .level-4 {
+    display: flex;
+    flex-direction: row;
+    flex-grow: 0; }
+  .listing-entries.level-3 .level-5 {
+    display: flex;
+    flex-grow: 1;
+    justify-content: center; }
+
+.status-bar .server-status-value {
+  display: inline;
+  text-align: right; }
+
+/* listings - visuals */
+.listing-entries {
+  overflow-y: scroll; }
+
+.listing-entry {
+  border-top-width: 1px;
+  border-color: #4d4d4d;
+  border-style: solid;
+  cursor: pointer;
+  -webkit-touch-callout: none;
+  /* iOS Safari */
+  -webkit-user-select: none;
+  /* Chrome/Safari/Opera */
+  -moz-user-select: none;
+  /* Firefox */
+  -ms-user-select: none;
+  /* IE/Edge */
+  user-select: none; }
+  .listing-entry:last-child {
+    border-bottom-width: 1px; }
+  .listing-entry:hover {
+    background-color: #444; }
+  .listing-entry:active {
+    background-color: #555; }
+
+.status-bar .server-status-name {
+  font-weight: bold; }
+.status-bar .server-status-value {
+  font-weight: normal; }

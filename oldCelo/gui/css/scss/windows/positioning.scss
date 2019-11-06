@@ -1,0 +1,32 @@
+/* windows - positioning */
+
+.level-2 {
+	display: flex;
+	flex-direction: column;
+}
+
+.title-bar {
+	flex-grow: 0;
+}
+
+.button-bar {
+	flex-grow: 0;
+}
+
+.window-content {
+	flex-grow: 1;
+}
+
+.level-3 {
+	display: flex;
+	flex-direction: row;
+}
+
+.level-4 {
+	display: flex;
+	flex-grow: 1;
+}
+
+.two_columns {
+	flex-basis: 50%;
+}

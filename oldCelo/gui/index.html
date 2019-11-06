@@ -1,0 +1,134 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8"><title>Celo</title>
+  <link rel="stylesheet" href="css/app.css">
+  <script src="js/utilities.js"></script>
+  <script src="js/elements.js"></script>
+  <script src="js/requests.js"></script>
+  <script src="js/console.js"></script>
+  <script src="js/initialize.js"></script>
+  <script src="js/looper.js"></script>
+</head>
+<body>
+  <div id="global-wrapper" class="wrapper level-0">
+    <div id="server-wrapper" class="wrapper level-1">
+
+      <!-- SERVER COLUMN START -->
+      <div id="server-settings" class="wrapper window settings level-2">
+        <div class="title-bar text-container">SERVER SETTINGS</div>
+        <div class="button-bar level-3"><!-- Loop switch -->
+          <div class="button text-container level-4 two_columns" id="send_loop_start">Send loop start</div>
+          <div class="button text-container level-4 two_columns" id="send_loop_end">Send loop end</div>
+        </div>
+        <div class="button-bar level-3"><!-- Polling switch -->
+          <div class="button text-container level-4 two_columns" id="polling_start">Polling start</div>
+          <div class="button text-container level-4 two_columns" id="polling_end">Polling end</div>
+        </div>
+        <!-- contents built by element.build_server_settings -->
+      </div>
+
+      <div id="server-status" class="wrapper window status level-2">
+        <div class="title-bar text-container">SERVER STATUS</div>
+        <!-- contents built by elements.build_server_status -->
+      </div>
+
+      <div id="server-console" class="wrapper window console level-2">
+        <div class="title-bar text-container">SERVER CONSOLE</div>
+        <div class="button-bar level-3">
+          <div class="button text-container level-4" id="server_send">SEND</div>
+          <div class="button text-container level-4" id="server_clear">CLEAR</div>
+          <div class="button text-container level-4" id="server_previous">PREVIOUS</div>
+          <div class="button text-container level-4" id="server_next">NEXT</div>
+        </div>
+        <div class="window-content level-3">
+          <textarea id="server_console" title="Server console" class="text-container level-4" autocomplete="off"></textarea>
+        </div>
+      </div>
+      <!-- SERVER COLUMN END -->
+
+    </div>
+    <div id="node-stats-wrapper" class="wrapper level-1">
+
+      <!-- NODE STATS COLUMN START -->
+      <div id="node-settings" class="wrapper window settings level-2">
+        <div class="title-bar text-container">NODE SETTINGS</div>
+      </div>
+
+      <div id="node-status" class="wrapper window status level-2">
+        <div class="title-bar text-container">NODE STATUS</div>
+      </div>
+
+      <div id="node-console" class="wrapper window console level-2">
+        <div class="title-bar text-container">NODE CONSOLE</div>
+        <div class="button-bar level-3">
+          <div class="button text-container level-4" id="node_send">SEND</div>
+          <div class="button text-container level-4" id="node_clear">CLEAR</div>
+          <div class="button text-container level-4" id="node_previous">PREVIOUS</div>
+          <div class="button text-container level-4" id="node_next">NEXT</div>
+        </div>
+        <div class="window-content level-3">
+          <textarea id="node_console" title="Node console" class="text-container level-4" autocomplete="off"></textarea>
+        </div>
+      </div>
+      <!-- NODE STATS COLUMN END -->
+
+    </div>
+    <div id="node-listing-wrapper" class="wrapper level-1">
+
+      <!-- NODE LISTING COLUMN START -->
+      <div id="node-listing" class="wrapper window listing level-2">
+        <div class="title-bar text-container">NODE LISTING</div>
+        <div class="listing-info text-container level-3">Number of active nodes: <span> 10</span></div>
+        <div class="listing-entries level-3">
+
+          <div class="listing-entry level-4">
+            <div class="node-listing-info text-container level-5">ID: <span>1</span></div>
+            <div class="node-listing-info text-container level-5">Status: <span>Active</span></div>
+            <div class="node-listing-info text-container level-5">Last change: <span>1</span></div>
+          </div>
+
+          <div class="listing-entry level-4">
+            <div class="node-listing-info text-container level-5">ID: <span>1</span></div>
+            <div class="node-listing-info text-container level-5">Status: <span>Active</span></div>
+            <div class="node-listing-info text-container level-5">Last change: <span>1</span></div>
+          </div>
+
+          <div class="listing-entry level-4">
+            <div class="node-listing-info text-container level-5">ID: <span>1</span></div>
+            <div class="node-listing-info text-container level-5">Status: <span>Active</span></div>
+            <div class="node-listing-info text-container level-5">Last change: <span>1</span></div>
+          </div>
+
+          <div class="listing-entry level-4">
+            <div class="node-listing-info text-container level-5">ID: <span>1</span></div>
+            <div class="node-listing-info text-container level-5">Status: <span>Active</span></div>
+            <div class="node-listing-info text-container level-5">Last change: <span>1</span></div>
+          </div>
+
+          <div class="listing-entry level-4">
+            <div class="node-listing-info text-container level-5">ID: <span>1</span></div>
+            <div class="node-listing-info text-container level-5">Status: <span>Active</span></div>
+            <div class="node-listing-info text-container level-5">Last change: <span>1</span></div>
+          </div>
+
+          <div class="listing-entry level-4">
+            <div class="node-listing-info text-container level-5">ID: <span>1</span></div>
+            <div class="node-listing-info text-container level-5">Status: <span>Active</span></div>
+            <div class="node-listing-info text-container level-5">Last change: <span>1</span></div>
+          </div>
+
+          <div class="listing-entry level-4">
+            <div class="node-listing-info text-container level-5">ID: <span>1</span></div>
+            <div class="node-listing-info text-container level-5">Status: <span>Active</span></div>
+            <div class="node-listing-info text-container level-5">Last change: <span>1</span></div>
+          </div>
+
+        </div>
+      </div>
+      <!-- NODE LISTING COLUMN END -->
+
+    </div>
+  </div>
+</body>
+</html>

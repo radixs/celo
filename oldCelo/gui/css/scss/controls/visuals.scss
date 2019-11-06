@@ -1,0 +1,10 @@
+/* controls - visuals */
+
+.settings {
+	input[type=text] {
+		background-color: $console-background;
+		border: none;
+		color: $standard-text;
+		text-align: right;
+	}
+}

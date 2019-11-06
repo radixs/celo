@@ -1,0 +1,30 @@
+GATEWAY
+-- user and profiles
+user
+
+
+profile
+
+
+
+-- server
+server_status - updated by frame, writes server stats
+id int
+created_dt datetime
+finished_dt datetime
+server_options - set server options
+
+server_request - request primary key
+server_request_status - actions taken for a request, stores also final response
+
+-- node
+node_request - question to the nodes
+node_request_status - steps done for the question
+
+node_listing - lists active nodes
+node_listing_status - log of actions for each node
+node_listing_settings - settings for each node
+
+
+
+CORE

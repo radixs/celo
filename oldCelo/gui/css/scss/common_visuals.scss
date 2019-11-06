@@ -1,0 +1,43 @@
+/* common visuals */
+body {
+	font-family: Calibri, Arial, sans-serif;
+	color: $standard-text;
+	background-color: $standard-background;
+}
+
+.button {
+	border: none;
+	background-color: #333;
+	color: #999;
+	cursor: pointer;
+	justify-content: center;
+	text-align: center;
+	@include no-user-select;
+	&:hover {
+		background-color: #444;
+	}
+	&:active {
+		background-color: #555;
+	}
+}
+
+.wrapper {
+	border-color: $border-color;
+	border-style: solid;
+}
+
+.title-bar {
+	@include no-user-select;
+}
+
+.level-1:not(:last-child) {
+	border-right-width: 1px;
+}
+
+.level-2:not(:last-child) {
+	border-bottom-width: 1px;
+}
+
+.text-container {
+	padding: 0.2em;
+}

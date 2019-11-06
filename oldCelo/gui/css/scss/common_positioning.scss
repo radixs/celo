@@ -1,0 +1,74 @@
+/* common positioning */
+#global-wrapper {
+	height: 100vh;
+}
+
+.wrapper {
+	display: flex;
+}
+
+/* level 0-1 (relation global to the 3 main columns) */
+.level-0 {
+	display: flex;
+	flex-direction: row;
+}
+
+#server-wrapper {
+	order: 1;
+	flex-basis: 25%;
+}
+
+#node-stats-wrapper {
+	order: 2;
+	flex-basis: 50%;
+}
+
+#node-listing-wrapper {
+	order: 3;
+	flex-basis: 25%;
+}
+
+/* level 1-2 (relation three main columns to specific windows inside them) */
+
+.level-1 {
+	display: flex;
+	flex-direction: column;
+}
+
+/* server column */
+#server-settings {
+  order: 1;
+  flex-basis: 50%;
+}
+
+#server-status {
+	order: 2;
+	flex-basis: 40%;
+}
+
+#server-console {
+	order: 3;
+	flex-basis: 10%;
+}
+
+/* node stats column */
+#node-settings {
+	order: 1;
+	flex-basis: 70%;
+}
+
+#node-status {
+	order: 2;
+	flex-basis: 20%;
+}
+
+#node-console {
+	order: 3;
+	flex-basis: 10%;
+}
+
+/* node listing column */
+#node-listing {
+	order: 1;
+	flex-basis: 100%;
+}

@@ -1,0 +1,10 @@
+/* console - visuals */
+
+.console {
+	textarea {
+		resize: none;
+		background-color: $console-background;
+		border: none;
+		color: $standard-text;
+	}
+}

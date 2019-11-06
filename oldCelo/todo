@@ -1,0 +1,145 @@
+0.0.4:
+TODO add to server status and node status server response in the DOM
+TODO add status table (history of server responses)
+
+0.0.5:
+TODO load and synchronize server status and node status history (poll with the last message id in status)
+--
+
+0.1.0:
+TODO console server register tasks - grab from ConsoleInputHistory (extend with status column)
+TODO console node register tasks - grab from ConsoleInputHistory (extend with status column) - manipulation or Celo query
+
+
+TODO take care of all TODO's and clean doc blocks and comments
+TODO refine node documentation and ideas and plan node GUI
+
+
+OLD ENTRIES:
+will use ajax in text command mode (other is option/setting mode) and send to gateway
+
+gateway responds with id if stored
+___
+
+if id is received put command as pending in server status
+polling can update command status, if fulfilled delete it
+
+
+___
+build gateway polling with frequency server setting
+add max command tracking listing
+
+
+
+SERVER status displays server stats and then command listing (scrollable)
+
+
+
+___
+build gateway db schema
+
+
+
+
+_________________
+ TODO:
+readapt functionality - store a history of solidifications for each pathway, if no results get produced try to backtrace the solidification process and see if that helps.
+
+First task:
+put a number and have CELO output a specific calculation. Reward best hits.
+____
+> THE STRUCTURE
+>
+> control panel parameters:
+> volatility: number, used to start pathways form pattern - describes how much the pattern must be similar to pathway trigger (either new pathway or to awake a waiting one),
+> solidification: how many times a combination of pathways need to be called (results processing history) to be solidified into one (deletes children results)
+> mutation_on_solidify: if to mutate pathway immediately on solidification
+> mutation_interval: how many times a pathway needs to be called to be mutated again
+> mutation_ratio: example 2:1 - will use 66% of the same type instructions to mutate and 33% totally random
+> mutation_scale: percentage of instructions in the pathway to mutate
+> mutate_only: if empty mutates everything, else will mutate only selected id's of pathways
+> mutate_mode: trigger, instructions or both
+> max_results: how many results should be produced before request ceases being processed (time to live), best results on inspection should hint what to change in the patterns
+>
+> instructions:
+> types
+> - cooperate: release value and die, release value and wait (can be used to teach time concept), create another request (advanced feature to be done later)
+> - calculate: run through basic calculations
+> - transform: run through functions (php)
+> - ...
+>
+> TABLES
+> pathway_model
+> - pathway_id
+> - triggering_pattern - needs to match all or part of pattern depending on volatility
+> - calls_without mutation
+>
+> pathway_instructions (stores 'steps' for each pathway)
+> - pathway_id
+> - instruction_id
+> - position (to queue the instructions for a pathway)
+>
+> instrucxtions
+> - instruction_id
+> - action (todo)
+> - type_id - used to control mutations with ratio
+>
+> instruction_types
+> - instruction_type_id
+> - name (cooperate, calculate, transform)
+>
+> session_pathway_instances
+> original_pattern
+> current_pattern
+> time_start
+> time_end
+> request_id
+> request_type (user-outside, self)
+> await_pattern (when in waiitng mode)
+> next_instruction (when in waiting mode)
+>
+> request info - info about the request from self or user
+>
+> results - stores history how pattern was handled, score - how many steps (called pathways) were taken to produce results, the lower the better
+>
+> general idea
+> patterns are being parsed into binary, each such pattern is dumped into the pool and then is used on each frame to start new pathways with trggers or to awake waiting pathways. Pathways store their results or when need further processing store patterns into pattern pool
+> __________________________
+>
+> Dnia 23 luty 2016 o 17:14 "radix@salvilines.eu" <radix@salvilines.eu> napisał(a):
+>> pattern - binary key
+>>
+>> pathway - group of instructions that process a pattern, might run as unlocked - as in gathering mode where it needs more patterns to finish or locked, when no more patterns are required - then it switches to a locked state
+>>
+>> locked pathway - return pattern is final, write result to hard storage and increment pattern use count when something reads from it, locked pathways restart themselves if marked as vital
+>>
+>> unlocked pathway - return pattern can be changed by another input, result is stored in temporary session storage
+>>
+>> reflex - injects pathways to session storage that can be directly launched because of high volatility score, they will be launched first
+>>
+>> pattern matching - can be done when trying to start a pathway or when trying to inject signature into existing one...
+>>
+>> SESSION START
+>> INIT FRAME
+>> - frame start
+>> - textual input parameters
+>> - load celo pathway
+>> - pass parameters to celo
+>> - celo loads up required pathways and stores them into session storage
+>> - celo shuts down
+>> - frame end
+>>
+>> LIVE FRAME
+>> - start frame
+>> - check if any input is present
+>> - basic input parsing (reflex database or codebase)
+>> - initiate reflex response pathways, convert input into patterns
+>> - read waiting pathways
+>> - try to link pathways using return patterns (locked patterns database, starts with highest use count, and then unlocked state)
+>> - feed parameters into pathway open gateways (unlocked state)
+>> - process any pathways that have received a valid signatures
+>> - trash pathways whose ttl expired, does not include vital pathways
+>> - save unresolved pathways to session storage
+>> - frame end
+>> -> start again LIVE FRAME if no stop command found
+>> SESSION END

@@ -1,0 +1,19 @@
+html, body, div, span, p, a, img, ol, ul, li, form, table, tbody, tfoot, thead, tr, th, td, canvas {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+	box-sizing: border-box;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
