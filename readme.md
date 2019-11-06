@@ -8,3 +8,7 @@ symfony server:start
 # TODOS:
 
 https://symfony.com/doc/current/logging.html
+
+https://symfony.com/doc/current/page_creation.html
+
+add to the page http://sdether.github.io/josh.js/
