@@ -1,16 +1,9 @@
-# Running
-To launch the application you must have symfony cli installed. Then do:
-```
-symfony server:start
-```
-
 # TODOS:
-* https://symfony.com/doc/current/logging.html add new logging category (console?) and have it update output window on frontend
-* https://symfony.com/doc/current/page_creation.html
+* https://medium.com/@stefan.poeltl/instant-realtime-notifications-with-symfony-and-mercure-e45270f7c8a5 -> push events to the browser and log it via logger below
+https://symfony.com/doc/current/components/mercure.html
+
 * add to the page http://sdether.github.io/josh.js/
 
-# Helpful links
-* https://symfony.com/doc/current/controller.html#generating-controllers
 
 # Notebook
 Every run needs to have an environment defined (can be picked from the list in the future, for now 2D grid)
@@ -21,3 +14,13 @@ continuation point.
 
 ### Ideas to explore
 Environment made up of json objects that the flow can interact with and change their states.
+
+Captcha smasher.
+
+
+First env tools - rope and the stick.
+
+https://www.youtube.com/watch?v=chukkEeGrLM - plan - imagine self doing something and then do it
+
+# Ultimate goal. Emergence.
+A process whereby larger entities, patterns, and regularities arise through interactions among smaller or simpler entities that themselves do not exhibit such properties.
