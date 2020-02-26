@@ -1,0 +1,88 @@
+/* global positioning */
+html, body {
+    height: 100%;
+    margin: 0;
+}
+.flex_parent {
+    display: flex;
+    flex-wrap: nowrap;
+    /* align-items: stretch; */
+}
+.flex_child {
+
+}
+
+/* app positioning */
+.app { /* parent */
+    flex-direction: column;
+    min-height: 100%;
+}
+
+.header { /* child */
+    order: 0;
+    flex-basis: 2em; /* height of the menu bar */
+}
+.windows { /* child */
+    order: 1;
+    flex-grow: 1;
+}
+
+/* header positioning */
+.header { /* parent */
+    flex-direction: row;
+}
+
+.logo { /* child */
+    order: 0;
+    flex-grow: 1;
+}
+.status_bar { /* child */
+    order: 1;
+    flex-grow: 20;
+}
+.toggle_bar { /* child */
+    order: 2;
+    flex-grow: 1;
+}
+
+/* windows positioning */
+.windows { /* parent */
+    flex-direction: row;
+}
+
+.command_area { /* child */
+    order: 0;
+    flex-grow: 2;
+}
+.state_area { /* child */
+    order: 1;
+    flex-grow: 1;
+}
+
+/* command area positioning */
+.command_area { /* parent */
+    flex-direction: column;
+}
+
+.command_response { /* child */
+    order: 0;
+    flex-grow: 3;
+}
+.command_input { /* child */
+    order: 1;
+    flex-grow: 1;
+}
+
+/* state area positioning */
+.state_area { /* parent */
+    flex-direction: column;
+}
+
+.visualization { /* child */
+    order: 0;
+    flex-grow: 2;
+}
+.running_parameters { /* child */
+    order: 1;
+    flex-grow: 1;
+}

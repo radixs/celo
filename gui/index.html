@@ -8,32 +8,32 @@
 </head>
 <body>
 
-    <div id="app">
-        <div id="header">
-            <div id="menu">
+    <div id="app" class="flex_parent app">
+        <div id="header" class="flex_child flex_parent header">
+            <div id="logo" class="flex_child logo">
                 CELO
             </div>
-            <div id="status_bar">
+            <div id="status_bar" class="flex_child status_bar">
                 status bar
             </div>
-            <div id="toggle-bar">
-                <button class="toggle button" id="worker_toggle">Worker off</button>
+            <div id="toggle_bar" class="flex_child toggle_bar">
+                <div class="toggle button" id="worker_toggle">Worker off</div>
             </div>
         </div>
-        <div id="windows">
-            <div id="command_area">
-                <div id="command_response">
+        <div id="windows" class="flex_child flex_parent windows">
+            <div id="command_area" class="flex_child flex_parent command_area">
+                <div id="command_response" class="flex_child command_response">
                     Command response
                 </div>
-                <div id="command_input">
+                <div id="command_input" class="flex_child command_input">
                     Command input
                 </div>
             </div>
-            <div id="state_area">
-                <div id="visualization">
+            <div id="state_area" class="flex_child flex_parent state_area">
+                <div id="visualization" class="flex_child visualization">
                     Visualizaiton
                 </div>
-                <div id="running_parameters">
+                <div id="running_parameters" class="flex_child running_parameters">
                     Running parameters
                 </div>
             </div>
