@@ -1,3 +1,6 @@
+# Installation
+* Install GUI by going into gui folder and run `npm install` then run `webpack` to create js and css bundles.
+
 # TODOS:
 * https://medium.com/@stefan.poeltl/instant-realtime-notifications-with-symfony-and-mercure-e45270f7c8a5 -> push events to the browser and log it via logger below
 https://symfony.com/doc/current/components/mercure.html
@@ -24,3 +27,9 @@ https://www.youtube.com/watch?v=chukkEeGrLM - plan - imagine self doing somethin
 
 # Ultimate goal. Emergence.
 A process whereby larger entities, patterns, and regularities arise through interactions among smaller or simpler entities that themselves do not exhibit such properties.
+
+# Resources.
+ 
+## CSS:
+ - Layout editing with flex box: https://css-tricks.com/snippets/css/a-guide-to-flexbox/
+ - Coloring and text styles: https://duckduckgo.com/?q=color+picker&t=canonical&atb=v140-1&ia=answer
